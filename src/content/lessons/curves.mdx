@@ -1,0 +1,41 @@
+## The most powerful tool in editing
+
+A **<Term id="curves">tone curve</Term>** maps input brightness (bottom axis) to output brightness (side axis). The straight diagonal means "no change". Bend it and you remap tones:
+
+- **Raise a point**: those tones get brighter.
+- **Lower a point**: those tones get darker.
+- **Steeper section**: more contrast in that tonal range.
+- **Flatter section**: less contrast there.
+
+The left of the graph is shadows, the middle is midtones, the right is highlights.
+
+## Three curves every editor uses
+
+**1. The S-curve: contrast.** Pull the shadows (lower-left quarter) down a little and push the highlights (upper-right quarter) up. The middle gets steeper: more contrast, more "pop".
+
+**2. Faded / matte blacks.** Drag the bottom-left end point straight *up*. Pure black becomes dark grey, giving that film or Instagram look.
+
+**3. Brightness without blowing highlights.** Lift just the middle of the curve. Midtones brighten while black and white points stay put.
+
+<EditLab exercise="s-curve" />
+
+<EditLab exercise="faded-film" />
+
+## Color curves
+
+Switch the channel to **R**, **G** or **B** and the curve affects only that color:
+
+- **Blue curve: lift the shadows** → blue/teal shadows. **Pull the highlights down** → warmer, yellow highlights. That's a popular cinematic look.
+- **Red curve: lift slightly** → warmer skin and sunsets.
+- **Green curve: lower the midtones slightly** → magenta tint, a fashion look.
+
+<EditLab panels={['curves']} defaultScene="portrait" />
+
+<Try>
+On the free editor above: make an S-curve on RGB, then switch to the B channel and lift its bottom-left point a little. Toggle before/after.
+</Try>
+
+<Mistakes>
+- Points too close together, which causes harsh, posterized transitions. Small moves go a long way.
+- Making the curve go *down* as it moves right. That inverts tones (fun for effects, not for photos).
+</Mistakes>

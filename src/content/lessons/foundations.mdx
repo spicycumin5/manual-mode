@@ -1,0 +1,63 @@
+## What a photo actually is
+
+A camera is a dark box that collects light for a moment. **Exposure** is how much light it collects, and that decides how bright the picture looks. Too little and the photo is dark and murky. Too much and the bright parts turn into blank white.
+
+In manual mode you control exposure with three settings:
+
+- **Aperture**: how *wide* the lens opening is.
+- **Shutter speed**: how *long* the opening stays open.
+- **ISO**: how much the camera *amplifies* what it collected.
+
+Think of filling a bucket from a tap. Aperture is how far you open the tap, shutter speed is how long you leave it running, and ISO is like having a smaller bucket that looks full sooner.
+
+## Stops: the unit of light
+
+Photographers measure light in **<Term id="stop">stops</Term>**. One stop is a doubling (or halving) of light. That is the whole trick: every setting is marked in stops, so you can trade one for another.
+
+<StopsDemo />
+
+- Shutter 1/125 → 1/60 s: open twice as long, **+1 stop**.
+- ISO 200 → 400: twice the amplification, **+1 stop**.
+- Aperture f/8 → f/5.6: twice the area, **+1 stop**.
+
+Cameras let you move in ⅓-stop clicks, so three clicks on any dial = one stop.
+
+## The exposure triangle
+
+Each setting changes brightness, **and each has a side effect.** That side effect is the creative part of photography:
+
+| Setting | Brighter when you… | Side effect |
+|---|---|---|
+| Aperture | Open it (smaller f-number) | Shallower **depth of field**: blurrier background |
+| Shutter speed | Slow it down | More **motion blur** and risk of camera shake |
+| ISO | Raise it | More **noise** (grain) |
+
+Because they all work in stops, you can swap them. Open the aperture one stop and speed the shutter up one stop: the brightness is identical, but the picture looks different. These are called **equivalent exposures**.
+
+<EquivalentExposures />
+
+## Try the real thing
+
+Below is the virtual camera. The meter in the viewfinder (the little scale at the bottom) shows how far you are from a "correct" exposure.
+
+<Simulator scene="park-runner" controls={['aperture', 'shutter', 'iso']} initial={{ aperture: 8, shutter: 1 / 250, iso: 100, focal: 50 }} readouts={true} />
+
+<Try>
+1. Open the aperture three clicks (f/8 → f/5.6). The image gets brighter and the meter moves to +1.
+2. Now speed up the shutter three clicks (1/250 → 1/500). Brightness is back to normal, but notice the runner got a little sharper.
+3. Push ISO to 6400 and watch the noise and the blown-out sky. Then bring the brightness back down with a fast shutter.
+</Try>
+
+## How bright is the world?
+
+Light levels differ enormously: a sunny beach is about 20 stops brighter than a starry night. That is why the same settings can't work everywhere.
+
+<LightLevels />
+
+<Mistakes>
+- Thinking ISO "lets in" more light. It doesn't. It amplifies the light you already captured, including the noise.
+- Forgetting that the f-number runs backwards: **f/2 is wide open, f/16 is a pinhole**.
+- Chasing a "perfect" meter reading. The meter is advice; you'll learn when to overrule it.
+</Mistakes>
+
+<LessonQuiz id="foundations" />

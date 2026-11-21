@@ -1,0 +1,53 @@
+## How the meter thinks
+
+Your camera's light meter measures the scene and suggests an exposure. The catch: **it assumes the world averages out to <Term id="middle-grey">middle grey</Term>.** For most scenes that's a good guess. But:
+
+- **Bright scenes** (snow, beaches, white walls) get *underexposed*. The meter darkens them toward grey.
+- **Dark scenes** (black cat, night club, dark suit) get *overexposed*. The meter brightens them toward grey.
+- **Backlit subjects** (person in front of a window) turn into silhouettes, because the bright background dominates.
+
+### Metering modes
+
+- **Evaluative / Matrix**: looks at the whole frame, smartly weighted. The default.
+- **Center-weighted**: favors the middle of the frame.
+- **Spot**: measures a tiny area. Point it at something mid-toned (grass, skin, grey jeans) for a precise reading.
+
+## Exposure compensation
+
+In Av, Tv, P, or M with Auto ISO, **<Term id="exposure-comp">exposure compensation</Term>** tells the camera "brighter than you think" (+) or "darker" (−).
+
+- Snow, sand, bright sky: **+1 to +2**
+- Dark subjects, night scenes: **−⅔ to −1**
+- Backlit portrait (no flash): **+1 to +2** (or spot meter the face)
+
+<Simulator scene="snow" controls={['mode', 'aperture', 'iso', 'comp', 'meter', 'focal']} initial={{ mode: 'Av', aperture: 8, iso: 100, focal: 70 }} />
+
+<Try>
+The camera is in aperture priority, metering the whole frame. The snow comes out grey. Add **+1.7** compensation and watch it turn white. Then reset compensation to 0 and switch to spot metering on the skier instead.
+</Try>
+
+## Reading the histogram
+
+The **<Term id="histogram">histogram</Term>** is a graph of every pixel's brightness: blacks on the left, whites on the right. It's more reliable than the screen on the back of your camera, which can look bright in a dark room and dim in the sun.
+
+- **Bunched left**: dark / underexposed.
+- **Bunched right**: bright / overexposed.
+- **Piled against an edge**: **<Term id="clipping">clipping</Term>**, meaning detail lost to pure black or pure white.
+
+There's no "correct" shape. A night scene *should* sit to the left. What matters is not clipping things you care about.
+
+The **highlight warning** (the blinking stripes on overexposed areas, often called "blinkies") shows you exactly what's clipped. Turn it on in your camera's playback menu.
+
+### ETTR
+
+**<Term id="ettr">Expose to the right</Term>**: when shooting RAW, make the exposure as bright as possible without clipping highlights, then darken it in editing. Brighter exposures have cleaner shadows. Just don't blow the highlights: once they hit pure white, the detail can't be recovered.
+
+<Challenge id="snow-meter" />
+
+<Mistakes>
+- Trusting the camera's LCD brightness instead of the histogram.
+- Thinking a histogram must be a centered "mountain".
+- Letting a bright sky clip because the subject looked fine. Check the blinkies.
+</Mistakes>
+
+<LessonQuiz id="metering" />

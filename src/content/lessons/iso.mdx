@@ -1,0 +1,41 @@
+## The volume knob
+
+**<Term id="iso">ISO</Term>** is amplification. The sensor captures a certain amount of light; ISO turns up the signal afterwards. Doubling ISO = +1 stop of brightness: **100 · 200 · 400 · 800 · 1600 · 3200 · 6400…**
+
+Amplifying the signal also amplifies the **<Term id="noise">noise</Term>**: random speckles and color blotches, worst in the shadows.
+
+<PhotoStrip frames={[
+  { label: 'ISO 100', scene: 'night-street', settings: { aperture: 2.8, shutter: 0.5, iso: 100, focal: 35, tripod: true }, slot: 'iso-100' },
+  { label: 'ISO 1600', scene: 'night-street', settings: { aperture: 2.8, shutter: 1 / 30, iso: 1600, focal: 35, tripod: true }, slot: 'iso-1600' },
+  { label: 'ISO 12800', scene: 'night-street', settings: { aperture: 2.8, shutter: 1 / 250, iso: 12800, focal: 35, tripod: true }, slot: 'iso-12800' },
+]} />
+
+Notice the car trails in the ISO 100 shot: the long exposure needed for low ISO also changed the motion. Every setting is a trade.
+
+## The rule: ISO last
+
+Pick your aperture (for depth of field) and shutter speed (for motion) first. Then raise ISO until the exposure is right. Use **<Term id="base-iso">base ISO</Term>** whenever the light allows.
+
+<Callout title="A dark photo is worse than a noisy one">
+It's tempting to keep ISO low and "brighten it later". But brightening an underexposed file in editing amplifies the noise just as much (often more) and you've also lost the chance at a sharp photo. **A correctly exposed ISO 6400 shot beats an underexposed ISO 800 shot pushed 3 stops.**
+</Callout>
+
+Modern cameras are clean up to ISO 1600–3200, usable to 6400–12800, and noise reduction software has gotten very good. Don't fear ISO; fear blur.
+
+## Auto ISO
+
+**<Term id="auto-iso">Auto ISO</Term>** lets you set aperture and shutter yourself while the camera picks the ISO. For events, sports and changing light it's the best of both worlds. Set a maximum ISO you're comfortable with, plus exposure compensation if the camera allows it.
+
+<Simulator scene="gym" controls={['aperture', 'shutter', 'iso', 'autoIso', 'focal']} initial={{ aperture: 2.8, shutter: 1 / 1000, iso: 800, focal: 85 }} />
+
+<Try>
+The gym is dim. Keep 1/1000 s to freeze the jump and f/2.8. Raise ISO until the meter centers. Then turn on Auto ISO and change the shutter speed. ISO follows automatically.
+</Try>
+
+<Mistakes>
+- Leaving ISO at 3200 from last night's party when you go out into the sun.
+- Using a slow shutter to "avoid noise" with moving subjects.
+- Setting the Auto ISO maximum too low (e.g. 800) so the camera gives up and underexposes.
+</Mistakes>
+
+<LessonQuiz id="iso" />

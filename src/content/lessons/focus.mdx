@@ -1,0 +1,38 @@
+## Sharp where it matters
+
+Perfect exposure means nothing if focus is on the wrong thing. Autofocus has two decisions: **when** to focus, and **where**.
+
+### Focus modes (when)
+
+- **<Term id="af-s">AF-S / One-shot</Term>**: focuses once when you half-press, then locks. For still subjects: portraits, landscapes, products.
+- **<Term id="af-c">AF-C / AI Servo</Term>**: keeps refocusing while you hold the button. For anything that moves: kids, pets, sports, birds.
+- **AF-A / AI Focus**: the camera guesses which one you need. It's convenient but unpredictable; better to choose yourself.
+- **MF**: manual focus. For stars, macro, or tricky low-light scenes.
+
+### Focus areas (where)
+
+- **Single point**: you choose exactly where. Precise and reliable.
+- **Zone / expanded**: a small group of points, which helps track erratic subjects.
+- **Wide / tracking**: the camera chooses, often following a subject around the frame.
+- **Eye / face detection**: modern cameras find and track eyes. Use it for people and animals.
+
+## Back-button focus
+
+**<Term id="back-button">Back-button focus</Term>** moves autofocus to a button on the back of the camera, so the shutter button only takes the picture. Then:
+
+- Hold the back button to track a moving subject (AF-C).
+- Release it to lock focus, recompose, and shoot. No need to switch modes.
+
+It feels strange for a day, then many people never go back.
+
+<Simulator scene="portrait" controls={['aperture', 'focus', 'focal']} initial={{ aperture: 1.8, shutter: 1 / 1000, iso: 200, focal: 85, autoIso: true }} histogram={false} />
+
+<Try>
+At f/1.8, switch focus between the leaves in front, the face, and the garden. With shallow depth of field, a few centimeters of focus error is the difference between a keeper and a miss.
+</Try>
+
+<Callout kind="tip" title="Focus on the nearest eye">
+In portraits, viewers look at the eyes first. At wide apertures, focus on the eye closest to the camera.
+</Callout>
+
+<LessonQuiz id="focus" />

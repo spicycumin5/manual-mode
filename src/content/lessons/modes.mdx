@@ -1,0 +1,32 @@
+## You don't have to do everything manually
+
+"Manual mode" is a mindset, not a dial position: **you decide what matters, and you make sure the camera respects it.** Semi-automatic modes are tools for that.
+
+| Mode | You set | Camera sets | Use it for |
+|---|---|---|---|
+| **M** (Manual) | Aperture, shutter, ISO | Nothing (the meter just advises) | Consistent light: studio, night, panoramas, flash |
+| **M + Auto ISO** | Aperture, shutter | ISO | Sports, events, wildlife: full creative control, changing light |
+| **Av / A** (Aperture priority) | Aperture (+ ISO) | Shutter | Portraits, landscapes: when depth of field matters most |
+| **Tv / S** (Shutter priority) | Shutter (+ ISO) | Aperture | Motion: action, panning, waterfalls |
+| **P** (Program) | (Optional) ISO, compensation | Aperture + shutter | Snapshots, when you just need *a* photo |
+
+In every auto mode, **exposure compensation** is how you overrule the meter.
+
+<Simulator scene="park-runner" controls={['mode', 'aperture', 'shutter', 'iso', 'autoIso', 'comp', 'focal']} initial={{ mode: 'Av', aperture: 4, iso: 100, focal: 85 }} />
+
+<Try>
+- In **Av**, change the aperture. Watch the camera pick the shutter speed (blue values are automatic).
+- Switch to **Tv** and set 1/1000 s. The camera picks the aperture.
+- In **Tv**, try 1/8000 s. The camera runs out of aperture and the "exposure out of range" warning appears.
+- Switch to **M**: now nothing moves unless you move it.
+</Try>
+
+## Which should I use?
+
+A practical habit many pros use:
+
+- **Av** most of the day, with Auto ISO and a minimum shutter speed set.
+- **M + Auto ISO** for action (lock the shutter to freeze motion, lock the aperture for the look).
+- **Full M** whenever the light is constant or every frame must match: night, studio, flash, panoramas, time-lapses.
+
+<LessonQuiz id="modes" />

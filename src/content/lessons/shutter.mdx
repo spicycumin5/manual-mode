@@ -1,0 +1,53 @@
+## Time as a creative tool
+
+The **<Term id="shutter-speed">shutter speed</Term>** is how long the sensor collects light. It is written in seconds or fractions: 1/1000 is one-thousandth of a second; 2s or 2″ is two whole seconds.
+
+Each halving or doubling is one stop: **1/1000 · 1/500 · 1/250 · 1/125 · 1/60 · 1/30 · 1/15 · 1/8…**
+
+Anything that moves during the exposure smears. That is either a problem (blurry kids) or the whole point (silky waterfalls, light trails).
+
+<PhotoCompare
+  a={{ label: '1/1000 s', scene: 'waterfall', settings: { aperture: 4, shutter: 1 / 1000, iso: 800, tripod: true }, slot: 'shutter-fast' }}
+  b={{ label: '1 s', scene: 'waterfall', settings: { aperture: 16, shutter: 1, iso: 100, tripod: true, nd: 3 }, slot: 'shutter-slow' }}
+/>
+
+## How fast is fast enough?
+
+| Subject | To freeze it |
+|---|---|
+| People walking | 1/250 s |
+| Running, kids playing | 1/500 s |
+| Sports, birds in flight | 1/1000 – 1/2000 s |
+| Water drops, splashes | 1/2000 s + |
+
+To *show* motion instead: waterfalls look silky from about ½ s; car light trails need several seconds.
+
+## Camera shake
+
+There are two kinds of blur. **<Term id="motion-blur">Motion blur</Term>** is the subject moving. **<Term id="camera-shake">Camera shake</Term>** is *you* moving, and it blurs the whole frame.
+
+The **<Term id="reciprocal-rule">reciprocal rule</Term>**: handheld, use at least **1 ÷ focal length** seconds. A 50mm lens needs 1/50 s; a 200mm lens needs 1/200 s. On a crop-sensor camera, multiply the focal length by the crop factor first.
+
+**<Term id="ibis">Image stabilization</Term>** buys you extra stops: with 4 stops of stabilization, 1/50 becomes roughly 1/3 s. But stabilization only fixes *your* movement, not the subject's.
+
+<Simulator scene="park-runner" controls={['aperture', 'shutter', 'iso', 'autoIso', 'focal', 'tripod', 'ibis', 'pan']} initial={{ shutter: 1 / 60, aperture: 16, iso: 100, autoIso: true, focal: 85 }} />
+
+<Try>
+- Start at 1/60 s, 85mm, handheld. See the "camera shake" warning? Slow down to 1/15 s and the whole scene smears (it gets too bright, too: in daylight, slow shutters need an ND filter). Turn stabilization to 4 stops: the trees sharpen but the runner is still blurred.
+- Now tick **Pan with subject** (the camera follows the runner). The runner sharpens and the background streaks. That's <Term id="panning">panning</Term>.
+- Find the slowest shutter speed where the runner looks sharp.
+</Try>
+
+## Long exposures and ND filters
+
+In daylight you often can't get a slow enough shutter: even at f/22 and ISO 100, the photo is too bright. An **<Term id="nd-filter">ND filter</Term>** is dark glass that blocks a set number of stops. A 6-stop ND turns 1/60 s into 1 s; a 10-stop ND turns 1/60 into 16 s.
+
+<Challenge id="silky-water" />
+
+<Mistakes>
+- Blaming the lens for "soft" photos that are actually camera shake. Check: is *everything* blurred the same way? That's shake.
+- Using a tripod with stabilization on. Some systems wobble when locked down; turn it off on a tripod unless your camera detects it.
+- Freezing a waterfall at 1/1000 when you wanted silk, or blurring a kid at 1/60 when you wanted them sharp. Decide first.
+</Mistakes>
+
+<LessonQuiz id="shutter" />

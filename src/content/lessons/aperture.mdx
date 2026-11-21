@@ -1,0 +1,67 @@
+## The hole in the lens
+
+Inside every lens is a ring of blades that open and close. The size of that opening is the **<Term id="aperture">aperture</Term>**, written as an **<Term id="f-number">f-number</Term>**: f/1.8, f/4, f/11…
+
+The f-number is a fraction (focal length ÷ opening), so **a smaller number means a bigger hole**:
+
+- **f/1.4 – f/2.8**: wide open. Lots of light, very shallow focus.
+- **f/4 – f/8**: the middle. Most lenses are sharpest around f/5.6–f/8.
+- **f/11 – f/22**: tiny opening. Little light, everything in focus, but detail softens from <Term id="diffraction">diffraction</Term>.
+
+The full-stop sequence is worth memorizing: **1.4 · 2 · 2.8 · 4 · 5.6 · 8 · 11 · 16 · 22**. Each step halves the light.
+
+## Depth of field
+
+Aperture's side effect is **<Term id="dof">depth of field</Term>**: how much of the scene, in front of and behind your focus point, looks sharp.
+
+<PhotoStrip frames={[
+  { label: 'f/1.8', scene: 'portrait', settings: { aperture: 1.8, shutter: 1 / 4000, iso: 200, focal: 85 }, slot: 'aperture-f1.8' },
+  { label: 'f/4', scene: 'portrait', settings: { aperture: 4, shutter: 1 / 800, iso: 200, focal: 85 }, slot: 'aperture-f4' },
+  { label: 'f/8', scene: 'portrait', settings: { aperture: 8, shutter: 1 / 200, iso: 200, focal: 85 }, slot: 'aperture-f8' },
+  { label: 'f/16', scene: 'portrait', settings: { aperture: 16, shutter: 1 / 50, iso: 200, focal: 85, tripod: true }, slot: 'aperture-f16' },
+]} />
+
+Depth of field gets **shallower** (more background blur) when you:
+
+1. **Open the aperture** (smaller f-number).
+2. **Use a longer focal length**, keeping the subject the same size in the frame.
+3. **Get closer** to your subject.
+4. **Put more distance** between the subject and the background.
+
+That last one is free: move your subject away from the wall and the background blurs more, no gear required.
+
+<DofDiagram />
+
+## Play with it
+
+<Simulator scene="portrait" controls={['aperture', 'shutter', 'iso', 'autoIso', 'focal', 'focus']} initial={{ aperture: 8, shutter: 1 / 125, iso: 200, focal: 85, autoIso: true }} />
+
+<Try>
+- With Auto ISO on, sweep the aperture from f/16 to f/1.4. Brightness stays the same; only the background changes.
+- Set f/1.8, then change the focal length from 35mm to 135mm. The background gets bigger *and* blurrier (that's <Term id="compression">compression</Term>).
+- Move the focus to the leaves in front. At f/1.8 the face goes soft: with shallow depth of field, focus has to be exact.
+</Try>
+
+## When to use what
+
+| Goal | Aperture |
+|---|---|
+| Portrait with blurred background | f/1.4 – f/2.8 |
+| Couple or small group | f/2.8 – f/4 (so both faces are sharp) |
+| Street, everyday | f/5.6 – f/8 |
+| Landscape, front-to-back sharp | f/8 – f/11, focused about ⅓ into the scene |
+| Starbursts on lights | f/11 – f/16 |
+
+<Callout title="Hyperfocal distance">
+For landscapes, the <Term id="hyperfocal">hyperfocal distance</Term> is the focus point that makes everything from half that distance to infinity sharp. At 24mm and f/11 it's only about 1.7 m. Focus there and almost everything is sharp.
+</Callout>
+
+<Challenge id="creamy-background" />
+
+<Mistakes>
+- Shooting a group at f/1.8 and only getting one face sharp.
+- Stopping down to f/22 "for maximum sharpness". Diffraction makes it softer than f/8–f/11.
+- Expecting a phone-like blurry background from a wide lens far away. Get closer, use a longer lens.
+</Mistakes>
+
+<LessonQuiz id="aperture" />

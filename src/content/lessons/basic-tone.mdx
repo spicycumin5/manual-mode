@@ -1,0 +1,26 @@
+## The six light sliders
+
+| Slider | What it does | Typical use |
+|---|---|---|
+| **Exposure** | Brightens or darkens everything, in stops | Fix overall brightness first |
+| **Contrast** | Pushes tones away from (or toward) the middle | Add punch, or soften harsh light |
+| **Highlights** | Brightens or darkens only the bright areas | Recover a bright sky (pull down) |
+| **Shadows** | Brightens or darkens only the dark areas | Open up shadow detail (push up) |
+| **Whites** | Sets the white point | Make the brightest tones truly white |
+| **Blacks** | Sets the black point | Make the darkest tones truly black |
+
+A classic "starting edit": **Highlights −, Shadows +, Whites +, Blacks −**. It recovers detail in both ends, then restores contrast at the extremes. Go gently; overdone, it creates the flat, glowing "HDR" look.
+
+<EditLab panels={['basic']} defaultScene="night-street" />
+
+<Try>
+- Pull **Highlights** down to recover the lamp glow and neon.
+- Push **Shadows** up to reveal the street. Watch the noise appear: shadows hide noise until you brighten them.
+- Drag **Whites** and **Blacks** until the histogram just touches both edges.
+</Try>
+
+<Mistakes>
+- Pushing shadows to +100 on every photo. Shadows give depth; keep some.
+- Fixing exposure with Contrast or Whites. Get overall brightness right first.
+- Recovering highlights that are fully clipped. If the pixel is pure white, there's nothing left to recover, which is why you protect highlights when shooting.
+</Mistakes>
